@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign up</title>
+<link rel="stylesheet" href="css/signup.css" />
+</head>
+<body>
+
+  <div class="card">
+    <div class="form-side">
+      <h1>Create your account</h1>
+      <p class="subtext">Already have an account? <a href="login.html">Sign in here</a></p>
+
+      <form id="signupForm" action="" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" />
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" />
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Retype Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" />
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="agree" name="agree" />
+          <p>By signing up you agree to receive updates and special offers.</p>
+        </div>
+
+        <button type="submit">Create account</button>
+        <p id="message" style="text-align:center; margin: 16px 0 0; font-size: 13.5px; min-height: 18px;"></p>
+      </form>
+    </div>
+
+    <div class="illustration-side">
+      <svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="200" cy="380" rx="140" ry="18" fill="#B7C1EF" opacity="0.6"/>
+        <path class="float-slow" d="M60 330 C40 300 40 260 70 240 C80 280 80 310 60 330 Z" fill="#2540D6" opacity="0.85"/>
+        <path class="float-slow" d="M340 320 C365 290 365 250 335 230 C325 270 325 300 340 320 Z" fill="#16309C" opacity="0.85"/>
+        <g class="float">
+          <rect x="140" y="70" width="140" height="260" rx="22" fill="#10143A"/>
+          <rect x="150" y="85" width="120" height="220" rx="10" fill="#EEF1FC"/>
+          <circle cx="210" cy="205" r="34" fill="none" stroke="#2540D6" stroke-width="6"/>
+          <rect x="196" y="196" width="28" height="24" rx="4" fill="#2540D6"/>
+          <circle cx="210" cy="200" r="6" fill="#EEF1FC"/>
+        </g>
+        <circle class="float" cx="110" cy="110" r="6" fill="#F2B84B"/>
+        <circle class="float-slow" cx="95" cy="150" r="4" fill="#2540D6"/>
+        <circle class="float" cx="300" cy="120" r="5" fill="#2540D6"/>
+        <circle class="float-slow" cx="315" cy="160" r="4" fill="#F2B84B"/>
+        <g class="float-slow">
+          <circle cx="300" cy="270" r="16" fill="#10143A"/>
+          <path d="M284 300 C284 280 316 280 316 300 L320 350 L280 350 Z" fill="#2540D6"/>
+          <rect x="286" y="300" width="10" height="45" rx="5" fill="#10143A"/>
+          <rect x="304" y="300" width="10" height="45" rx="5" fill="#10143A"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <script src="js/signup.js"></script>
+</body>
+</html>

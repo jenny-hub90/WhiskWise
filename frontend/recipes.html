@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Recipes</title>
+    <link rel="stylesheet" href="css/recipe.css" />
+      <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a class="brand" href="home.html">🍳 WhiskWise</a>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="add-recipe.html">Add Recipe</a>
+        <a href="recipes.html">View Recipes</a>
+        <a href="#" id="logoutLink">Log out</a>
+      </div>
+    </nav>
+ <div class="card">
+        <h1>Your recipes</h1>
+        <p class="subtext">Click a card to see ingredients and steps.</p>
+
+        <div class="recipe-grid" id="recipeGrid"></div>
+      </div>
+    </div>
+     <footer class="site-footer">
+      <p>
+        &copy; <span id="year"></span> Recipe Book. Built for keeping your own
+        recipes in one place.
+      </p>
+    </footer>
+
+    <script src="js/recipes.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

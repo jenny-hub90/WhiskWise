@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/recipe.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a class="brand" href="home.html">🍳 WhiskWise</a>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="add-recipe.html">Add Recipe</a>
+        <a href="recipes.html">View Recipes</a>
+        <a href="admin.html" class="is-current">Admin</a>
+        <a href="#" id="logoutLink">Log out</a>
+      </div>
+    </nav>
+
+    <!-- Shown only if a logged-in, non-admin user reaches this page -->
+    <div class="card access-denied" id="accessDenied" style="display: none;">
+      <h1>You are not an admin</h1>
+      <p class="subtext">This page is for admin accounts only. Your account doesn't have admin access.</p>
+      <a class="btn-primary" href="home.html">Back to home</a>
+    </div>
+
+    <div class="card" id="dashboardContent" style="display: none;">
+      <h1>Admin dashboard</h1>
+      <p class="subtext">All registered users and every recipe in the app, in one place.</p>
+
+      <h3 class="admin-section-title">Users</h3>
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Joined</th>
+          </tr>
+        </thead>
+        <tbody id="usersBody">
+          <tr><td colspan="4" class="empty-state">Loading users…</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="admin-section-title">Recipes</h3>
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Added by</th>
+            <th>Created</th>
+          </tr>
+        </thead>
+        <tbody id="recipesBody">
+          <tr><td colspan="4" class="empty-state">Loading recipes…</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer class="site-footer">
+      <p>
+        &copy; <span id="year"></span> Recipe Book. Built for keeping your own
+        recipes in one place.
+      </p>
+    </footer>
+
+    <script src="js/admin.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

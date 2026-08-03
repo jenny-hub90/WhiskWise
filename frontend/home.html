@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home — WhiskWise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/recipe.css" />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a class="brand" href="home.html">🍳 WhiskWise</a>
+      <div class="nav-links">
+        <a href="home.html" class="is-current">Home</a>
+        <a href="add-recipe.html">Add Recipe</a>
+        <a href="recipes.html">View Recipes</a>
+        <a href="#" id="logoutLink">Log out</a>
+      </div>
+    </nav>
+
+    <main class="welcome-section">
+      <div class="welcome-card">
+        <p class="eyebrow" id="greetingEyebrow">Welcome back</p>
+        <h1 id="welcomeMessage">Welcome!</h1>
+        <p class="welcome-copy">
+          Start by adding a recipe, or browse what you've already saved.
+        </p>
+        <div class="welcome-actions">
+          <a class="btn-primary" href="add-recipe.html">Add a recipe</a>
+          <a class="btn-secondary" href="recipes.html">View all recipes</a>
+        </div>
+        <div class="card-notch" aria-hidden="true"></div>
+      </div>
+
+      <div class="stats-row" id="statsRow" aria-live="polite"></div>
+
+      <section class="recent-section" id="recentSection" style="display: none;">
+        <div class="recent-heading">
+          <h2>Recently added</h2>
+          <a href="recipes.html" class="recent-see-all">See all →</a>
+        </div>
+        <div class="recent-grid" id="recentGrid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        &copy; <span id="year"></span> Recipe Book. Built for keeping your own
+        recipes in one place.
+      </p>
+    </footer>
+
+    <script src="js/home.js"></script>
+  </body>
+</html>
