@@ -27,7 +27,11 @@ async function all(sql, args = []) {
 async function run(sql, args = []) {
   const result = await db.execute({ sql, args });
   return {
-    lastInsertRowid: result.lastInsertRowid,
+    // Turso returns this as a BigInt, which JSON.stringify can't handle.
+    // Convert to a plain Number so it's safe to send back in an API response.
+    lastInsertRowid: result.lastInsertRowid !== undefined && result.lastInsertRowid !== null
+      ? Number(result.lastInsertRowid)
+      : null,
     changes: result.rowsAffected,
   };
 }
